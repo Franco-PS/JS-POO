@@ -12,10 +12,37 @@
 </head>
 <body>
     <h2>Clases tomadas</h2>
-    <div class="d-flex">
-        <div id="cursos"></div>
-        <div id="curso"></div>
-    </div>
+    <form action="" id="forCursos">
+        <div class="d-grid">
+            <div class="form-item">
+                <label for="">
+                    Nombre
+                    <input type="text" name="nombreCurso" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label for="">
+                    Poster
+                    <input type="text" name="posterCurso" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label for="">
+                    Clases
+                    <input type="number" min="1" name="clasesCurso" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label for="">
+                    <input class="button" type="submit" value="Crear curso">
+                </label>
+            </div>
+        </div>
+    </form>
+
+    <div id="cursos" class="d-grid"></div>
+    
+        
     
     <script type="module" src="index.js"></script>
 </body>

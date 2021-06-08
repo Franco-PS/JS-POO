@@ -14,13 +14,20 @@ h3{
     color: #575E66;
     text-transform: none;    
 }
-/* .d-flex{
-    display: flex;
-    overflow: hidden;
-    display: table;
+.d-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
-#cursos,#curso{
-    padding: 30px 15px;
-    border: 2px solid #575E66;
-    border-radius: 5px;
-} */
+.etiqueta{
+    background-color: aqua;
+    padding: 10px 5px;
+}
+
+@media screen and (min-width:600px) {
+    .d-grid{
+        background-color: #575E66;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(auto,1fr);
+    }    
+}
