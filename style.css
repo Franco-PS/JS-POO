@@ -12,5 +12,48 @@ h2,
 h3{
     font-family: 'Open Sans', sans-serif;
     color: #575E66;
+}
+.ed-grid{
+    display: grid;
+    grid-template-rows: 1ft;
+    grid-template-columns:auto;
+}
+@media screen and (min-width:768px ){
+    .ed-grid{
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+.card{
     
+    display: flex;
+    flex-direction: column;
+    /* border:1px solid #575E66; */
+    box-shadow:2px 2px 5px #575E66;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+.certifa{
+    transition: 1s;
+}
+.card:hover .certifa{
+    border-radius: 10px;
+    box-shadow:2px 2px 5px #575E66;
+}
+.form-item{
+    margin: 0 10px;
+}
+.form-item input{
+    min-width: 10px;
+    max-width: 200px;
+    /* margin:0 10px; */
+}
+.button-item input{
+    background-color: tomato;
+    border: 0;
+    border-radius: 5px;
+    box-shadow:2px 2px 5px #575E66;
+    padding: 10px;
+    margin: 10px;
 }
