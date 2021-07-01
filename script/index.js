@@ -1,40 +1,24 @@
+import Curso from "./cursoClass.js";
 
-import { Curso } from "./cursoClass.js";
-
-const formulario= document.getElementById("formCursos")
-formulario.addEventListener("submit",e =>{
+const formulario= document.getElementById("formCursos");
+console.log(formulario.nombreCurso)
+formulario.addEventListener("submit",e=>{
     e.preventDefault()
-    // console.log(el.target.nombreCurso.value)
-    const target= e.target
-    // console.log(target.nombreCurso.value)
-    // console.log(target.nombrePoster.value)
-    // console.log(target.nombreTemario.value)
-    // console.log(target.nombreAlt.value)
-    const valores= new Curso(target.nombreCurso.value,target.nombrePoster.value, target.nombreTemario.value,target.nombreAlt.value )
-
-    mostrarCurso(valores)
+    const target= e.target;
+    const data= new Curso(target.nombreCurso.value,target.nombrePoster.value,target.nombreAlt.value)
+    presenta(data)
 })
 
-// const html= new Curso("HTML","https://edteam-media.s3.amazonaws.com/courses/small/26557907-0555-427e-a40c-6ff207f98d72.png",25);
+//construtor block
 
-// const css= new Curso("CSS","https://edteam-media.s3.amazonaws.com/courses/small/daa72e4e-c5d0-406e-9f6d-01e646bf719b.png",25);
 
-const elem= document.getElementById("cursos");
-
-function mostrarCurso(valor){
-    const box= document.createElement("div");
-    box.classList.add("card");
-
-    box.innerHTML=`
-    
-        <img src="${valor.getPoster()}" class="certifa" alt="${valor.getAlt()} >
-        <p class="tituo">Curso: ${valor.getNombre()}</p>
-        <span class="supParrafo">Clases: ${valor.getTemario()}</span>
-    
-`
-elem.appendChild(box)
+const blox= document.getElementById("cursos");
+function presenta(val){
+    const hijo=document.createElement("div");
+    hijo.classList.add("card");
+    hijo.innerHTML=`
+        <img class="certifa" src="${val.getPoster()}" alt="${val.getAlt()}">
+        <p> Nombre de Curso: ${val.getNombre()}</p>
+    `
+    blox.appendChild(hijo)
 }
-
-
-// mostrarCurso(html)
-

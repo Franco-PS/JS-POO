@@ -1,8 +1,7 @@
-export  class Curso{
-    constructor(nombre,poster,temario, alt ){
-        this.nombre= nombre
-        this.poster= poster
-        this.temario= temario
+export default class Curso{
+    constructor(nombre,poster,alt){
+        this.nombre=nombre
+        this.poster=poster
         this.alt=alt
     }
     getNombre(){
@@ -10,9 +9,6 @@ export  class Curso{
     }
     getPoster(){
         return this.poster
-    }
-    getTemario(){
-        return this.temario
     }
     getAlt(){
         return this.alt
